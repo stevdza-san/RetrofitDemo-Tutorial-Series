@@ -6,8 +6,8 @@ import retrofit2.Response
 
 class Repository {
 
-    suspend fun getPost(): Response<Post> {
-        return RetrofitInstance.api.getPost()
+    suspend fun getPost(auth: String): Response<Post> {
+        return RetrofitInstance.api.getPost(auth)
     }
 
     suspend fun getPost2(number: Int): Response<Post> {
